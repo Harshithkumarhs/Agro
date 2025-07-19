@@ -1,0 +1,680 @@
+.consumer-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.header-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-section p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+}
+
+.btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  color: #333;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+}
+
+.grocery-form-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.grocery-form-section h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.grocery-items-section h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.grocery-item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.item-input input,
+.quantity-input input {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.item-input input:focus,
+.quantity-input input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.remove-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.remove-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.add-item-btn {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.add-item-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.orders-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.orders-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.no-data i {
+  font-size: 3rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.no-data h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.orders-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.order-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.status-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.status.confirmed {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+}
+
+.farmer-cost {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.items-list {
+  margin-bottom: 1.5rem;
+}
+
+.items-list h4 {
+  color: #555;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e9ecef;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.item-quantity {
+  color: #666;
+  font-weight: 500;
+}
+
+.logistics-options {
+  margin-top: 1.5rem;
+}
+
+.logistics-options h4 {
+  color: #555;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.logistics-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.logistics-option:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+.logistics-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logistics-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.logistics-phone {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.logistics-charge {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.select-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.select-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .grocery-item-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .status-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .logistics-option {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .consumer-dashboard-container {
+    padding: 1rem 0;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .header-section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .header-section h1 {
+    font-size: 2rem;
+  }
+  
+  .header-section p {
+    font-size: 1rem;
+  }
+  
+  .dashboard-actions {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .action-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    min-height: 50px;
+  }
+  
+  .grocery-form-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .grocery-form-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .form-group input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .add-item-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    min-height: 50px;
+  }
+  
+  .orders-section {
+    padding: 1.5rem;
+  }
+  
+  .orders-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .order-card {
+    padding: 1.25rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .item-row {
+    padding: 0.6rem;
+  }
+  
+  .logistics-option {
+    padding: 0.75rem;
+  }
+  
+  .select-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .consumer-dashboard-container {
+    padding: 0.5rem 0;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .header-section {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-section h1 {
+    font-size: 1.6rem;
+  }
+  
+  .header-section p {
+    font-size: 0.9rem;
+  }
+  
+  .dashboard-actions {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .action-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+    min-height: 45px;
+  }
+  
+  .grocery-form-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .grocery-form-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .form-group input {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .add-item-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .submit-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+    min-height: 45px;
+  }
+  
+  .orders-section {
+    padding: 1rem;
+  }
+  
+  .orders-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .order-card {
+    padding: 1rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .item-row {
+    padding: 0.5rem;
+  }
+  
+  .logistics-option {
+    padding: 0.6rem;
+  }
+  
+  .select-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-section h1 {
+    font-size: 1.4rem;
+  }
+  
+  .action-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+  
+  .grocery-form-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .form-group input {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+  
+  .add-item-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .submit-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+  
+  .orders-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1rem;
+  }
+  
+  .select-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    min-height: 36px;
+  }
+} 
